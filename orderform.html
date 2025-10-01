@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q1-ICT10: Project</title>
+
+  <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
+
+  <style>
+    body {
+      font-family: "DM Serif Text", serif;
+      font-size: 20px;
+      background-color: #f5efeb;
+      text-align: center;
+       background-image: url("ord.png");   
+            background-size: cover;              
+            background-position: center;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #c8d9e6;
+      color: #2f4156;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      background: #242d54;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    .navbar a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+    }
+    #info_display {
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.9);
+      display: inline-block;
+      text-align: left;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="orderform.html">Order Here!</a>
+      <a href="contact.html">Contact Info</a>
+    </nav>
+  </header>
+
+  <h1>Order Form</h1>
+
+  <form id="orderForm" onsubmit="return false;">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="address">Address:</label><br>
+    <input type="text" id="address" name="address" required><br><br>
+
+    <label for="contact">Contact Number:</label><br>
+    <input type="text" id="contact" name="contact" required><br><br>
+
+    <h3>Select Pizza:</h3>
+
+    <label>
+      <input type="checkbox" name="food" id="p1" value="c.piz" data-price="345" py-change="update_inline_total">
+      Cheese Pizza (₱345)
+    </label><br>
+
+    <label>
+      <input type="checkbox" name="food" id="p2" value="p.piz" data-price="350" py-change="update_inline_total">
+      Pepperoni Pizza (₱350)
+    </label><br>
+
+    <label>
+      <input type="checkbox" name="food" id="p3" value="am.piz" data-price="400" py-change="update_inline_total">
+      All Meat Pizza (₱400)
+    </label><br>
+
+    <label>
+      <input type="checkbox" name="food" id="p4" value="h.piz" data-price="350" py-change="update_inline_total">
+      Hawaiian Pizza (₱350)
+    </label><br>
+
+    <label>
+      <input type="checkbox" name="food" id="p5" value="av.piz" data-price="350" py-change="update_inline_total">
+      All Vegetable Pizza (₱350)
+    </label><br><br>
+
+    <strong>Order Total: ₱<span id="orderTotal">0</span></strong><br><br>
+
+    <button type="submit" py-click="compute_total">Submit Order</button>
+  </form>
+
+  <div id="order_output"></div>
+
+
+  <script type="py" src="orderform.py"></script>
+</body>
+</html>

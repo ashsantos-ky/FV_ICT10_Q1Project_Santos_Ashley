@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Q1-ICT10:Project</title>
+        <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css" />
+        <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
+    <style>
+        body {
+            font-family: "DM Serif Text", serif;
+            font-size: 20px;
+            background-color: #f5efeb;
+
+        }
+        .container {
+            margin-top: 50px;
+            text-align: center;
+            background: #f5efeb;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            align-items: center;
+             background-image: url("con1.png");   
+            background-size: cover;              
+            background-position: center;
+            color: #f5efeb;
+        }
+        .container2 {
+            margin-top: 50px;
+            text-align: center;
+            background: #cbd8e2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            align-items: center;
+            background-image: url("con2.png");   
+            background-size: cover;              
+            background-position: center;
+            color: #f5efeb;
+        }
+        footer {
+            text-align: center;
+            padding: 2px;
+            background-color: #242d54;
+            margin-top: 30px;
+            border-radius: 10px;
+            color: #f5efeb;
+        }
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            background: #242d54;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .navbar a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none; 
+        }
+        table, th, td {
+            width: 50%;
+            border: 2px #f5efeb solid;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        th, td {
+            padding: 10px;
+        }
+        .button-center {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    </head>
+    <body>    
+    <header>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="orderform.html">Order Here!</a>
+            <a href="contact.html">Contact Info</a>
+        </nav>
+    </header>
+    <div id="container" class="container">
+        <h1 id="restaurant_name"></h1>
+        <p id="own_name"></p>
+        <p id="year_estab"></p>
+        <p><strong>Products:</strong> <span id="products"></span></p>
+        <script type="py" src="main.py"></script>
+    </div>
+    <div id="container2" class="container2">
+      <table>
+        <tr>
+          <th>Menu</th>
+        </tr>
+        <tr>
+          <td>Cheese Pizza</td>
+          <td>₱345</td>
+        </tr>
+        <tr>
+          <td>Pepperoni Pizza</td>
+          <td>₱350</td>
+        </tr>
+        <tr>
+          <td>All Meat Pizza</td>
+          <td>₱400</td>
+        </tr>
+        <tr>
+          <td>Hawaiian Pizza</td>
+          <td>₱350</td>
+        </tr>
+        <tr>
+          <td>All Vegetable Pizza</td>
+          <td>₱400</td>
+        </tr>
+      </table>
+    </div>
+    <div class="button-center">
+      <a href="orderform.html">
+        <button style="background-color:#c8d9e6; color: #2f4156; padding:10px 20px; border:none; border-radius:5px; font-size:18px; cursor:pointer;">
+  Order Now
+</button>
+      </a>
+    </div>
+    <footer>
+      <p><strong>Business Hours:</strong> <span id="business_hours"></span></p>
+      <p><strong>Service:</strong> <span id="has_delivery"></span></p>
+    </footer>
+    </body>
+</html>

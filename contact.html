@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact Info - Good Dough</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
+    <style>
+        body {
+            font-family: "DM Serif Text", serif;
+            font-size: 20px;
+            background-color: #f5efeb;
+        }
+        .container {
+            margin: 50px auto;
+            max-width: 500px;
+            color: #f5efeb;;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            background-image: url("con2.png");   
+            background-size: cover;              
+            background-position: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            background: #242d54;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .navbar a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none; 
+        }
+        h1 {
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #242d54;
+            margin-top: 30px;
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="orderform.html">Order Here!</a>
+            <a href="contact.html">Contact Info</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Contact Information</h1>
+        <p><strong>Location:</strong> <span id="location"></span></p>
+        <p><strong>Phone Number:</strong> <span id="p_numb"></span></p>
+        <p><strong>Email:</strong> <span id="email_add"></span></p>
+        <script type="py" src="contact.py"></script>
+    </div>
+    <footer>
+        <p><strong>Business Hours:</strong> <span id="business_hours"></span></p>
+        <p><strong>Service:</strong> <span id="has_delivery"></span></p>
+    </footer>
+</body>
+</html>
+
+<!--used W3schools for help-->
